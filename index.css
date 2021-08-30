@@ -1,0 +1,88 @@
+body{
+    /* background-image: url('https://images.unsplash.com/photo-1598620617377-3bfb505b4384?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG5vdGVwYWR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80'); */
+    background-image: url('https://images.all-free-download.com/images/graphicthumb/daisies_on_orange_background_193847.jpg');
+    color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+table{
+    margin-top: 75px;
+    margin-left: 400px;
+    border-radius: 10px;
+}
+
+td{
+    align-content: center;
+    width: 100px;
+
+}
+
+th{
+    width: 10px;
+}
+
+img{
+    height: 50px;
+    position: absolute;
+    margin-left: 400px;
+    border-radius: 10px;
+}
+
+button{
+    margin-left: 950px;
+    position: absolute;
+    background-color: #24a0ed;
+    color: white;
+    border-radius: 10px;    
+    height: 50px;
+}
+
+button:hover{
+    background-color: springgreen;
+    color: black;
+}
+
+tr:hover{
+    background-color: #24a0ed;
+    color: white;
+}
+
+@media only screen and (max-width: 767px) {
+    table{
+        margin-top: 75px;
+        margin-left: 20px;
+        border: solid;
+        border-radius: 10px;
+    }
+
+    body{
+        background-image: url('https://wallpaperaccess.com/full/1152515.jpg');
+        
+    }
+
+    img{
+        height: 50px;
+        position: absolute;
+        margin-left: 50px;
+        border-radius: 10px;
+    }
+
+    button{
+        margin-left: 500px;
+        position: absolute;
+        background-color: #24a0ed;
+        color: white;
+        border-radius: 10px;    
+        height: 50px;
+    }
+    
+    tr:hover{
+        background-color: springgreen;
+        color: black;
+    }
+
+}

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script src="./update.js"></script>
+        <link rel="stylesheet" href="details.css">
+
+    </head>
+    <body onload="updateData()" style="background-image: url('https://wallpapercave.com/wp/wp2282695.jpg');" >
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFT-k4iAXBJtcpITrX2acUgNYL2-YeHYAhpA&usqp=CAU" alt="">
+          <h2 id="head">Update Details</h2>
+          <br>
+          <label for="name">User Name : </label> 
+          <input type="text" id="name" >
+          <br>
+          <label for="name">User Id :</label>   
+          <input type="text" id="id">
+          <br>
+          <label for="profile">User profile : </label> 
+          <input type="text" id="profile">
+        <br>
+          <label for="gender">User Gender : </label> 
+          <input type="text" id="gender">
+        <br> 
+          <label for="department">User department : </label> 
+          <input type="text" id="department">
+        <br>
+          <label for="salary">User salary : </label> 
+          <input type="text" id="salary">
+        <br>
+          <label for="startdate">User start date : </label> 
+          <input type="text" id="startdate">
+        <br>
+          <label for="note">User note : </label> 
+          <input type="text" id="note">
+  
+        <br><br>       
+     
+          <button onclick="updateNewData()">Submit</button>    
+          
+          <button style="background-color: red;color: white;"onclick="location.href = './localdata.html';">cancel</button>
+            <!-- <button onclick="update()">click</button> -->
+        </div>
+    </body>
+</html>

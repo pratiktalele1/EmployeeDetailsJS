@@ -1,0 +1,145 @@
+<html>
+    <head>
+
+    </head>
+    <script>
+        function data(){
+            let list =JSON.parse(localStorage.getItem("objList"));
+            console.log(list);
+            var table = document.getElementById("addRows");
+            var row = table.insertRow(0);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                var cell6 = row.insertCell(5);
+                var cell7 = row.insertCell(6);
+                var cell8 = row.insertCell(7);
+                var cell9 = row.insertCell(8);
+                
+
+                cell1.innerHTML = "id";
+                cell2.innerHTML = "name";
+                cell3.innerHTML = "pic";
+                cell4.innerHTML = "gender";
+                cell5.innerHTML = "salary";
+                cell6.innerHTML = "date";
+                cell7.innerHTML = "department";
+                cell8.innerHTML = "note";
+                cell9.innerHTML = "action";
+                
+            for(var i=0;i<list.length;i++){
+                
+                var row = table.insertRow(i+1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                var cell6 = row.insertCell(5);
+                var cell7 = row.insertCell(6);
+                var cell8 = row.insertCell(7);
+                var cell9 = row.insertCell(8);
+                
+
+                cell1.innerHTML = list[i].id;
+                cell2.innerHTML = list[i].name;
+                // cell3.innerHTML = list[i].pic;
+                var data=list[i].gender;
+                if(data==="Male"){
+                    // cell4.innerHTML = "M";
+                    cell3.innerHTML="<img id='pic' src='https://i.pinimg.com/originals/5f/40/6a/5f406ab25e8942cbe0da6485afd26b71.jpg' alt=''>";
+
+                }else{
+                    // cell4.innerHTML = "F";
+                    cell3.innerHTML = "<img id='pic' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgWjX5dynW04yySDP5IB4lW5UTRo3G0wPTZQ&usqp=CAU' alt=''>";
+
+                }
+                
+                cell4.innerHTML = list[i].gender;
+                cell5.innerHTML = list[i].salary;
+                cell6.innerHTML = list[i].date;
+                cell7.innerHTML = list[i].department;
+                cell8.innerHTML = list[i].note;
+                var data=list[i].id;
+                console.log(data);
+                cell9.innerHTML = '<button style="background-color: green;color: white;border-radius: 10px;height: 40px; font-family:cursive;" onclick="update('+list[i].id+')">update</button>  <button style="background-color: red;color: white;border-radius: 10px;height: 40px; font-family:cursive;" onclick="remove('+list[i].id+')">delete</button>'
+            }
+        }
+
+        function remove(id){
+     
+            let list =JSON.parse(localStorage.getItem("objList"));
+            
+            for(var i=0;i<list.length;i++){
+                if(list[i].id==id){
+                    console.log("id match");
+                    list.splice(i, 1);
+                }
+            }      
+            localStorage.setItem("objList",JSON.stringify(list));
+            window.location.reload();
+        }
+
+        // function update(){
+        //     alert("from update");
+        //     location.href = './update.html';
+        // }
+
+    </script>   
+    <script src="update.js"></script>
+    
+    <style>
+        
+        body{
+            font-family:cursive;
+        }
+
+        #image{
+            position: absolute;
+            height: 80px;
+        }
+        
+        #add{
+            height: 50px;
+            background-color: rgb(0, 255, 13);
+            border-radius: 20px;
+            float: right;
+            font-family: cursive;
+            font-size:larger;
+            border-color: black;
+        }
+        table{
+            margin-top: 80px;
+        }
+        button:hover{
+            /* background-color: rgb(0, 247, 255); */
+            color: white;
+            
+        }
+
+        td{
+            width: 200px;
+        }
+
+        div{
+            margin-top: 20px;
+        }
+        
+        #pic{
+            height: 50px;
+            
+        }
+        
+    </style>         
+        <body onload="data()">
+            <img id="image" src="https://www.logodesign.net/logo/abstract-people-3205ld.png?size=2&industry=employee" alt="">
+            <h1 align="center">Employee Details</h1>
+            <button id="add" onclick="location.href = './EmployeeDetails.html';">+ Add User</button>
+            <div>
+            <table id="addRows" rules="rows" >   
+            </table>
+        </div>
+        </body>
+</html>
